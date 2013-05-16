@@ -12,14 +12,23 @@ $(document).ready(function() {
     chart: {
       type: "line",
       animation: Highcharts.svg, // dont animate in old IE
-      marginRight: 10
+      marginRight: 10,
+      backgroundColor: 'transparent'
     },
     title: {
-      text: "Recent values"
+      text: "Recent values",
+      style: {
+        color: "#FFF"
+      }
     },
     xAxis: {
       type: "datetime",
-      tickPixelInterval: 150
+      tickPixelInterval: 150,
+      labels: {
+        style: {
+          color: "#FFF"
+        }
+      }
     },
     yAxis: {
       title: {
@@ -31,7 +40,17 @@ $(document).ready(function() {
         value: 0,
         width: 1,
         color: "#808080"
-      }]
+      }],
+      labels: {
+        style: {
+          color: "#FFF"
+        }
+      },
+      title: {
+        style: {
+          color: "#CCC"
+        }
+      }
     },
     tooltip: {
       formatter: function() {

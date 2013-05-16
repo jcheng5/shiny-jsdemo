@@ -27,7 +27,8 @@ shinyServer(function(input, output, session) {
 
   # Generate histogram
   output$plotout <- renderPlot({
-    hist(values(), col = "#cccccc",
+    par(bg="#444444", fg="#888888", col.lab="white", col.axis="white", col.main="white", col.sub="white")
+    hist(values(), col = "#666666",
       main = paste("Last", length(values()), "values"), xlab = NA)
   })
 
